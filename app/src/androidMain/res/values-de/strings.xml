@@ -1475,4 +1475,7 @@ Zum Beispiel 1,3 oder 2b,4,6."</string>
     <string name="quest_recycling_type_pet_bottles">"PET-Flaschen"</string>
     <string name="quest_maxweight_add_sign">"Schild hinzufügen"</string>
     <string name="quest_maxweight_remove_sign">"Schild entfernen"</string>
+
+    <string name="quest_allotments_plot_ref">"Welche Nummer hat diese Parzelle?"</string>
+    <string name="quest_allotments_plot_ref_hint">"Die Parzellennummer steht meist an der Gartenpforte."</string>
 </resources>

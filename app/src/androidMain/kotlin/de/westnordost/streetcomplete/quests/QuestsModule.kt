@@ -17,6 +17,7 @@ import de.westnordost.streetcomplete.quests.address.AddHousenumber
 import de.westnordost.streetcomplete.quests.aerialway.AddAerialwayBicycleAccess
 import de.westnordost.streetcomplete.quests.air_conditioning.AddAirConditioning
 import de.westnordost.streetcomplete.quests.air_pump.AddAirCompressor
+import de.westnordost.streetcomplete.quests.allotments_plot.AddPlotRef
 import de.westnordost.streetcomplete.quests.amenity_cover.AddAmenityCover
 import de.westnordost.streetcomplete.quests.amenity_indoor.AddIsAmenityIndoor
 import de.westnordost.streetcomplete.quests.atm_cashin.AddAtmCashIn
@@ -429,6 +430,7 @@ fun questTypeRegistry(
     90 to AddPostboxRef(), // requires text input and to be very close to the collection plate
 
     91 to AddAccessPointRef(), // requires text input and to be very close to the collection plate
+    187 to AddPlotRef(),
 
     92 to AddWheelchairAccessOutside(),
 

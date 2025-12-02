@@ -727,6 +727,9 @@ Before uploading your changes, the app checks with a &lt;a href="https://www.wes
 
     <string name="quest_airConditioning_title">Is this place air-conditioned?</string>
 
+    <string name="quest_allotments_plot_ref">What is the number of this allotment plot?</string>
+    <string name="quest_allotments_plot_ref_hint">Look for a number on the gate of the plot.</string>
+
     <string name="quest_atm_cashin_title">Can you deposit cash at this ATM?</string>
     <string name="quest_atm_operator_title">Which bank operates this ATM?</string>
 
@@ -1865,4 +1868,7 @@ Alternatively, you can leave a note (with a photo).</string>
     <string name="overlay_mtb_scale_5_description">Ultra-steep blocky terrain with counter‑uphills, boulder fields, landslides, pivot switchbacks with obstacles, back‑to‑back high drops and fallen trees. Bike carrying around obstacles impossible; riding unavoidable. Trial mastery required.</string>
     <string name="overlay_mtb_scale_6">Grade 6</string>
     <string name="overlay_mtb_scale_6_description">Dangerous and impassable terrain, not suitable for mountain biking.</string>
+
+
+
 </resources>
