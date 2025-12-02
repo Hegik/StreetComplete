@@ -19,7 +19,7 @@ class AddPlotRef : OsmFilterQuestType<String>(), AndroidQuest {
     """
     override val changesetComment = "Added Ref number to allotments plot"
     override val wikiLink = "Key:ref"
-    override val icon = R.drawable.quest_housenumber //ICON ANFERTIGGEN
+    override val icon = R.drawable.quest_housenumber // ICON ANFERTIGGEN
     override val achievements = listOf(EditTypeAchievement.CITIZEN)
 
     override fun getTitle(tags: Map<String, String>) = R.string.quest_allotments_plot_ref
