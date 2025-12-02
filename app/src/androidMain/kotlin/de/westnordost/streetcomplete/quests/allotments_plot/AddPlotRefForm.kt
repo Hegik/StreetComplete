@@ -1,6 +1,7 @@
 package de.westnordost.streetcomplete.quests.allotments_plot
 
 import android.os.Bundle
+import android.text.InputFilter
 import android.view.View
 import android.view.inputmethod.EditorInfo
 import androidx.core.widget.doAfterTextChanged
@@ -17,6 +18,7 @@ class AddPlotRefForm : AbstractOsmQuestForm<String>() {
         super.onViewCreated(view, savedInstanceState)
 
         val input = binding.root
+        input.filters = arrayOf<InputFilter>(InputFilter.LengthFilter(5))
 
         input.hint = getString(R.string.quest_allotments_plot_ref_hint)
         input.doAfterTextChanged { text ->
