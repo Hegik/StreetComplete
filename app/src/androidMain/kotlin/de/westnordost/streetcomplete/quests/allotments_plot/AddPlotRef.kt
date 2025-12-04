@@ -11,12 +11,16 @@ import de.westnordost.streetcomplete.data.quest.NoCountriesExcept
 import de.westnordost.streetcomplete.data.user.achievements.EditTypeAchievement
 import de.westnordost.streetcomplete.osm.Tags
 
-class AddPlotRef : OsmFilterQuestType<String>(), AndroidQuest {
+sealed class PlotRefAnswer
+data class PlotRef(val ref: String) : PlotRefAnswer()
+object NoVisiblePlotRef : PlotRefAnswer()
+
+class AddPlotRef : OsmFilterQuestType<PlotRefAnswer>(), AndroidQuest {
 
     override val elementFilter = """
         ways, nodes with
         allotments = plot
-        and !ref
+        and !ref and !noref
     """
 
     override val changesetComment = "Added Ref number to allotments plot"
@@ -34,7 +38,10 @@ class AddPlotRef : OsmFilterQuestType<String>(), AndroidQuest {
 
     override fun createForm() = AddPlotRefForm()
 
-    override fun applyAnswerTo(answer: String, tags: Tags, geometry: ElementGeometry, timestampEdited: Long) {
-        tags["ref"] = answer
+    override fun applyAnswerTo(answer: PlotRefAnswer, tags: Tags, geometry: ElementGeometry, timestampEdited: Long) {
+        when (answer) {
+            is PlotRef -> tags["ref"] = answer.ref
+            is NoVisiblePlotRef -> tags["noref"] = "yes"
+        }
     }
 }
